@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/iv_near"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_near"
+        android:layout_width="25dp"
+        android:layout_height="25dp" />
+    <LinearLayout
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/item_job_details"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_toRightOf="@id/iv_near"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <TextView
+                android:id="@+id/item_job_name"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:textSize="18sp"
+                android:text="服务员"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/item_job_area"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="华天大酒店"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <TextView
+                android:id="@+id/item_salary"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textColor="@color/red"
+                android:text="60/一天"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/item_job_number"
+                android:textColor="@color/black"
+                android:layout_marginRight="10dp"
+                android:text="20人"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_navigation"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_navigation"
+        android:layout_alignParentRight="true"
+        android:layout_width="25dp"
+        android:layout_height="25dp" />
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/dotted_line"/>
+</RelativeLayout>

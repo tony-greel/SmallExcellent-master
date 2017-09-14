@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/stateColor</item>
+        <item name="colorPrimaryDark">@color/start_background_ll</item>
+        <item name="colorAccent">@color/stateColor</item>
+        <item name="android:windowTranslucentStatus">false</item>
+    </style>
+
+    <style name="activityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/stateColor</item>
+        <item name="colorPrimaryDark">@color/stateColor</item>
+        <item name="colorAccent">@color/stateColor</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:background="@color/stateColor"
+        android:id="@+id/tb_setting"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_account"
+            android:elevation="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="20dp"
+            android:text="账户与安全"
+            android:textColor="#111111"
+            android:textSize="14dp"
+            android:background="@drawable/background_item"
+            android:gravity="center_vertical"
+            android:paddingLeft="30dp"/>
+        <TextView
+            android:id="@+id/tv_about"
+            android:elevation="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="20dp"
+            android:text="关于我们"
+            android:textColor="#111111"
+            android:background="@drawable/background_item"
+            android:textSize="14dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="30dp"/>
+        <TextView
+            android:id="@+id/tv_exit"
+            android:elevation="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_item"
+            android:text="退出当前账号"
+            android:textColor="#111111"
+            android:textSize="14dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="30dp"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

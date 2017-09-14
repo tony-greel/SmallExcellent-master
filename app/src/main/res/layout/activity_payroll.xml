@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.enjoy.hyc.payroll.PayrollActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.Toolbar
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                android:background="@color/stateColor"
+                android:id="@+id/tb_payroll"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"/>
+        </android.support.design.widget.AppBarLayout>
+        <com.mingle.widget.LoadingView
+            android:visibility="gone"
+            android:id="@+id/lv_payroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <android.support.v4.widget.NestedScrollView
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/nv_payroll_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:textSize="18sp"
+                            android:text="总资产（元）"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_all_total"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="40dp"
+                            android:textColor="@color/black"
+                            android:text="0.00"
+                            android:textSize="20sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <View
+                        android:background="@color/gary"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="0.5px"
+                        android:layout_height="match_parent"/>
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:textSize="18sp"
+                            android:text="今日收入（元）"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_today_income"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="40dp"
+                            android:textColor="@color/black"
+                            android:text="0.00"
+                            android:textSize="20sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <View
+                    android:background="@color/gary"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5px"/>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp">
+                        <View
+                            android:background="#fda626"
+                            android:layout_marginLeft="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"/>
+                        <TextView
+                            android:text="传 单"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_leaflet_income"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="0.00"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="90dp"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp">
+                        <View
+                            android:background="#ff7568"
+                            android:layout_marginLeft="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"/>
+                        <TextView
+                            android:text="问 卷"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_psq_income"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="0.00"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="90dp"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp">
+                        <View
+                            android:background="#949fda"
+                            android:layout_marginLeft="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"/>
+                        <TextView
+                            android:text="家 教"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_fraulein_income"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="0.00"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="90dp"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp">
+                        <View
+                            android:background="#14ecd7"
+                            android:layout_marginLeft="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"/>
+                        <TextView
+                            android:text="促 销"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView" />
+                        <TextView
+                            android:id="@+id/tv_sales_income"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="0.00"
+                            android:layout_marginLeft="90dp"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/textView"
+                            android:layout_alignBottom="@+id/textView"
+                            android:layout_toEndOf="@+id/textView"
+                            android:layout_marginStart="18dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp">
+                        <View
+                            android:background="#b7d1f1"
+                            android:layout_marginLeft="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"/>
+                        <TextView
+                            android:text="美 工"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_artist_income"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="0.00"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="90dp"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp">
+                        <View
+                            android:background="#c0e758"
+                            android:layout_marginLeft="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"/>
+                        <TextView
+                            android:text="打 字"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_typing_income"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="0.00"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="90dp"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp">
+                        <View
+                            android:background="#ea96f9"
+                            android:layout_marginLeft="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"/>
+                        <TextView
+                            android:text="服 务"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_service_income"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="0.00"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="90dp"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp">
+                        <View
+                            android:background="#83cab9"
+                            android:layout_marginLeft="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"/>
+                        <TextView
+                            android:text="网 络"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_net_income"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="0.00"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="90dp"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp">
+                        <View
+                            android:background="#e2e963"
+                            android:layout_marginLeft="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"/>
+                        <TextView
+                            android:text="礼 仪"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_protocol_income"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="0.00"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="90dp"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp">
+                        <View
+                            android:background="#8b8e89"
+                            android:layout_marginLeft="20dp"
+                            android:layout_centerVertical="true"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"/>
+                        <TextView
+                            android:text="其 他"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_other_income"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:text="0.00"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="90dp"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <View
+                    android:background="#efeff1"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp">
+                    <TextView
+                        android:text="收入明细"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <View
+                    android:background="@color/gary"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5px"/>
+                <android.support.v7.widget.RecyclerView
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:id="@+id/rv_income_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
