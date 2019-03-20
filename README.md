@@ -44,10 +44,6 @@
 
 ![img](https://github.com/old-traveler/SmallExcellent1/blob/master/img/S70511-134024.jpg)
 
-    *个人简历模块
-
-![img](https://github.com/old-traveler/SmallExcellent1/blob/master/img/S70511-134033.jpg)
-
     *编辑简历模块
 
 ![img](https://github.com/old-traveler/SmallExcellent1/blob/master/img/S70511-134041.jpg)
