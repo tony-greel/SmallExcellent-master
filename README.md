@@ -28,10 +28,6 @@
 
 ![img](https://github.com/old-traveler/SmallExcellent1/blob/master/img/S70511-133901.jpg)
 
-    *个人信息模块
-
-![img](https://github.com/old-traveler/SmallExcellent1/blob/master/img/S70511-133940.jpg)
-
     *工资单模块
 
 ![img](https://github.com/old-traveler/SmallExcellent1/blob/master/img/S70511-133945.jpg)
@@ -43,10 +39,6 @@
     *足迹模块
 
 ![img](https://github.com/old-traveler/SmallExcellent1/blob/master/img/S70511-134024.jpg)
-
-    *编辑简历模块
-
-![img](https://github.com/old-traveler/SmallExcellent1/blob/master/img/S70511-134041.jpg)
 
     *设置模块
 
